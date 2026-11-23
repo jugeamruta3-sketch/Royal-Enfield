@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Royal Enfield - Shopping Cart</title>
+
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <style>
+
+        body {
+            background-color: #ffffff;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            background-color: #111;
+        }
+
+        .navbar-brand {
+            color: #d32f2f !important;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 1.1;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin-left: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d32f2f !important;
+        }
+
+        /* Cart */
+
+        .cart-title {
+            letter-spacing: 1px;
+        }
+
+        .cart-item img {
+            width: 180px;
+            height: 140px;
+            object-fit: contain;
+            background: #f5f5f5;
+        }
+
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+        }
+
+        .cart-summary {
+            background: #f7f7f7;
+        }
+
+        .btn-danger {
+            background-color: #c62828;
+            border-color: #c62828;
+        }
+
+        .btn-danger:hover {
+            background-color: #a91f1f;
+            border-color: #a91f1f;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #111;
+            color: white;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-logo {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 576px) {
+
+            .cart-item img {
+                width: 100%;
+                height: 200px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="index.html">
+            ROYAL<br>
+            ENFIELD
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        HOME
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="bikes.html"
+                    >
+                        BIKES
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="accessories.html"
+                    >
+                        ACCESSORIES
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="login.html"
+                    >
+                        LOGIN
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link active"
+                        href="cart.html"
+                    >
+                        CART
+                        <i class="bi bi-cart3"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <div class="menu-hero-content">
+
+                <p class="text-danger fw-bold">
+                    ROYAL ENFIELD
+                </p>
+
+
+                <h1>
+                    OUR MENU
+                </h1>
+
+
+                <p>
+                    Explore our range of Royal Enfield motorcycles.
+                </p>
+
+
+                <div class="hero-line"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BIKES ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+
+            <div class="row g-4">
+
+
+                <!-- BIKE 1 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544368200-c30c22b3d7c7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNsYXNzaWMlMjAzNTB8ZW58MHx8MHx8fDA%3D"
+                            class="img-fluid"
+                            alt="Royal Enfield Classic 350"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    CLASSIC 350
+                                </h5>
+
+                                <span class="price">
+                                    ₹1,93,080
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Timeless design.
+                                Pure motorcycling.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Classic 350"
+                                data-price="193080"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 2 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://images.unsplash.com/photo-1671430373742-cfc70b151e79?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid"
+                            alt="Royal Enfield Meteor 350"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    METEOR 350
+                                </h5>
+
+                                <span class="price">
+                                    ₹2,05,900
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Cruise easy.
+                                Ride in comfort.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Meteor 350"
+                                data-price="205900"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 3 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://images.carandbike.com/cms/Royal_Enfield_Hunter_350_Dapper_G_2_7a29bffc81.jpg"
+                            class="img-fluid"
+                            alt="Royal Enfield Hunter 350"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    HUNTER 350
+                                </h5>
+
+                                <span class="price">
+                                    ₹1,49,900
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Light. Agile.
+                                Made for the city.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Hunter 350"
+                                data-price="149900"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 4 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/09/01/7cb10ec4941d8270d789dbf29c8c2cea169356643168725_original.jpg"
+                            class="img-fluid"
+                            alt="Royal Enfield Bullet 350"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    BULLET 350
+                                </h5>
+
+                                <span class="price">
+                                    ₹1,73,562
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                The legendary ride
+                                continues.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Bullet 350"
+                                data-price="173562"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 5 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://www.webbikeworld.com/wp-content/uploads/2023/08/2022-Royal-Enfield-Interceptor-650-Review-2.jpg"
+            "
+                            class="img-fluid"
+                            alt="Royal Enfield Interceptor 650"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    INTERCEPTOR 650
+                                </h5>
+
+                                <span class="price">
+                                    ₹3,03,000
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Built for performance.
+                                Born to roam.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Interceptor 650"
+                                data-price="303000"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 6 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://th.bing.com/th/id/OIP.Jna0ZEfkT3vxiyblJsgZNgHaEb?w=252&h=180&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3"
+                            class="img-fluid"
+                            alt="Royal Enfield Continental GT 650"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    CONTINENTAL GT 650
+                                </h5>
+
+                                <span class="price">
+                                    ₹3,19,000
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Cafe racer style.
+                                Race inspired.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Continental GT 650"
+                                data-price="319000"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 7 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://th.bing.com/th/id/OIP.xm4ZRjrMP-o2kWRzSSzEiwHaE8?w=225&h=150&c=6&r=0&o=7&dpr=1.4&pid=1.7&rm=3"
+                            class="img-fluid"
+                            alt="Royal Enfield Super Meteor 650"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    SUPER METEOR 650
+                                </h5>
+
+                                <span class="price">
+                                    ₹3,64,000
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Long rides.
+                                Supreme comfort.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Super Meteor 650"
+                                data-price="364000"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 8 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://th.bing.com/th/id/OIP.g-P0umbi4fQfLggVdsudbwHaEK?w=331&h=186&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3"
+                            class="img-fluid"
+                            alt="Royal Enfield Himalayan 450"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    HIMALAYAN 450
+                                </h5>
+
+                                <span class="price">
+                                    ₹2,85,000
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Built to explore.
+                                Made for adventure.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Himalayan 450"
+                                data-price="285000"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIKE 9 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="bike-card">
+
+
+                        <img
+                            src="https://imgd.aeplcdn.com/642x361/n/cw/ec/99489/scram-411-left-front-three-quarter-8.jpeg?isig=03"
+                            class="img-fluid"
+                            alt="Royal Enfield Scram 411"
+                        >
+
+
+                        <div class="bike-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5>
+                                    SCRAM 411
+                                </h5>
+
+                                <span class="price">
+                                    ₹2,08,000
+                                </span>
+
+                            </div>
+
+
+                            <p>
+                                Scramble anywhere.
+                                Ride free.
+                            </p>
+
+
+                            <button
+                                class="btn btn-danger add-to-cart"
+                                data-name="Scram 411"
+                                data-price="208000"
+                            >
+                                ADD TO CART
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+        id="contact"
+        class="footer"
+    >
+
+        <div class="container py-5">
+
+
+            <div class="row g-4">
+
+
+                <!-- BRAND -->
+
+                <div class="col-md-4">
+
+                    <h4 class="text-danger fw-bold">
+                        ROYAL ENFIELD
+                    </h4>
+
+
+                    <p class="text-secondary">
+                        Pure motorcycling.<br>
+                        Timeless design.<br>
+                        Endless adventures.
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-md-2">
+
+                    <h6>
+                        QUICK LINKS
+                    </h6>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+
+                    <a href="bikes.html">
+                        Bikes
+                    </a>
+
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                </div>
+
+
+
+                <!-- ACCOUNT -->
+
+                <div class="col-md-3">
+
+                    <h6>
+                        ACCOUNT
+                    </h6>
+
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+
+                    <a href="register.html">
+                        Register
+                    </a>
+
+
+                    <a href="#">
+                        My Orders
+                    </a>
+
+
+                    <a href="#">
+                        Wishlist
+                    </a>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="col-md-3">
+
+                    <h6>
+                        CONTACT
+                    </h6>
+
+
+                    <p class="text-secondary">
+                        Email: support@example.com
+                    </p>
+
+
+                    <p class="text-secondary">
+                        Phone: +91 90000 00000
+                    </p>
+
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary">
+
+
+            <p class="text-secondary text-center mb-0">
+
+                © 2026 Royal Enfield Demo Website
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
+```
